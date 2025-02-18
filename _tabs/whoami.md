@@ -5,7 +5,7 @@ order: 4
 ---
 ### Hi (• ◡•) !
 
-I'm Arthur, I'm an offensive security consultant from France (currently living and working in Germany). My main interests are malware/exploit development, OS internals and active directory pentesting. I am currently working at `@root IT-SECURITY` as a red teamer & security consultant.
+I'm Arthur, I'm an offensive security consultant from France (currently living and working in Germany). My main interests are red teaming, malware/exploit development, OS internals and active directory pentesting. I am currently working at `@root IT-SECURITY` as a red teamer & security consultant.
 
 ### Certifications
 
