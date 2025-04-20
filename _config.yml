@@ -14,7 +14,7 @@ timezone: Europe/Paris
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: B0lg0r0v # the main title
+title: MochaByte # the main title
 
 tagline: Divide and Conquer # it will display as the subtitle
 
@@ -23,23 +23,23 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://arthurminasyan.com"
+url: "https://mochabyte.xyz"
 
 github:
-  username: B0lg0r0v # change to your GitHub username
+  username: mochabyte0x # change to your GitHub username
 
 twitter:
-  username: B0lg0r0v # change to your Twitter username
+  username: mochabyte0x # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Arthur Minasyan
-  email: contact@arthurminasyan.com # change to your email address
+  name: Mochabyte
+  email: contact@mochabyte.xyz # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/mochabyte0x # change to your Twitter homepage
+    - https://github.com/mochabyte0x # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/arthur-minasyan-b582b7233/
@@ -98,7 +98,7 @@ theme_mode:
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/Chloe.jpg
+avatar: /assets/img/chloe_2.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
