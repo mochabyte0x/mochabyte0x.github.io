@@ -107,7 +107,7 @@ LPVOID MapNtdll() {
 
 This code does exactly two things:
 
-- It obtains a handle to a clean copy `NTDLL.DLL` via the `\\KnownDlls\ntdll.dll` path.
+- It obtains a handle to a clean copy of `NTDLL.DLL` via the `\\KnownDlls\ntdll.dll` path.
 - It then maps this clean copy of `NTDLL.DLL` in memory using the syscall `NtMapViewOfSection()`
 
 The known DLLs directory is kinda like a *shared memory* for essential DLLs. DLLs in this directory are being used by many many processes. This means that the windows loader does not load a separate copy of it for every process, but rather it creates a shared memory section the first time the DLL is loaded and then maps that same clean copy into every process that requests it. The idea is to optimize the loading of these DLLs.
@@ -211,7 +211,7 @@ void AES_DecryptBuffer(AES_CTX* ctx, const unsigned char* in_data, unsigned char
 #define AES_BLOCK_SIZE 16
 ```
 
-The key and iv are declared as macros at the top of `main.c`:
+The key and iv are declared at the top of `main.c`:
 
 ```c
 uint8_t aes_k[16] = { #-KEY_VALUE-# };
@@ -294,13 +294,13 @@ printf("[i] Creating suspended process..\n");
 	printf("[+] Payload executed!\n");
 ```
 
-The function `CreateSuspendedProcess` creates a new process in a suspended state. When creating a process this way, it's main thread is also suspended which means it's in an alertable state. It takes the macro `TARGET_PROCESS` as input and returns you the following:
+The function `CreateSuspendedProcess()` creates a new process in a suspended state. When creating a process this way, it's main thread is also suspended which means it's in an alertable state. It takes the macro `TARGET_PROCESS` as input and returns you the following:
 
 - A pointer to the process id 
 - A pointer to a handle of the newly created process 
 - A pointer to a handle to the processes thread
 
-But wait, we’re actually not using `CREATE_SUSPENDED`. Instead, we're creating the process in a *debugged* state.
+But wait, we’re actually not using `CREATE_SUSPENDED` Flag. Instead, we're creating the process in a *debugged* state.
 
 ```c
 // This is the function cCPAu (API Hashing) from inject.c
@@ -399,7 +399,7 @@ To test detection, I used CTFPacker to pack some raw Sliver shellcode and upload
 
 ![](assets/attachment/ba5b842e1b3cf82b000a31aa4e8c9c92.png)
 
-Altough I find those results pretty good for such basic loader, keep in mind that we've only evaded the signature based detection part of AVs. 
+Altough I find those results pretty good for such a basic loader, keep in mind that we've only evaded the signature based detection part of AVs. 
 
 You can find a video on the [GitHub page](https://github.com/mochabyte0x/CTFPacker/) where I demonstrate CTFPacker successfully evading Microsoft Defender and establishing a C2 channel using raw Sliver shellcode. 
 
