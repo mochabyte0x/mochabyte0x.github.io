@@ -2,7 +2,7 @@
 layout: post
 title:  "RustDesk - DLL Injection Vulnerabilities (CVE-2025-XXXX)"
 category : CVE
-tags :  CVE, DLL-Injection, Vulnerability, RustDesk
+tags :  CVE DLL-Injection Vulnerability RustDesk
 ---
 Welcome to my very first blog post ! 🎉 I’m super excited to start this journey of sharing my experiments and learnings with y'all. My goal is to document my journey into malware development and red team/pentesting techniques. Feel free to follow me on X or LinkedIn !
 
