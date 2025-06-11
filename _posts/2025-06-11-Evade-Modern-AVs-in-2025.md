@@ -300,7 +300,7 @@ The function `CreateSuspendedProcess()` creates a new process in a suspended sta
 - A pointer to a handle of the newly created process 
 - A pointer to a handle to the processes thread
 
-But wait, we’re actually not using `CREATE_SUSPENDED` Flag. Instead, we're creating the process in a *debugged* state.
+But wait, we’re actually not using the `CREATE_SUSPENDED` flag during the process creation. Instead, we're creating the process in a *debugged* state.
 
 ```c
 // This is the function cCPAu (API Hashing) from inject.c
