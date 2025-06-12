@@ -159,7 +159,7 @@ BOOL Unhook(LPVOID module) {
 }
 ```
 
-The code is fairly easy to understand, so I won't go in detail. At this point, we've got a clean, unhooked version of `NTDLL.DLL` in memory that we can abuse :P !
+The code is fairly easy to understand, so I won't go into detail. At this point, we've got a clean, unhooked version of `NTDLL.DLL` in memory that we can abuse :P !
 
 ![](assets/attachment/06191ff4529f72493a73ce576aa9e6ae.png)
 
@@ -226,17 +226,17 @@ Once the decryption routine finishes, the decrypted payload is stored at the poi
 
 At this point, we've unhooked `NTDLL.DLL` and decrypted the payload into memory while using some techniques like API hashing to stay under the radar. The final step is to somehow execute our payload, right? 
 
-This is the most complicated part imo. Normally, execution method will depend on what AV/EDR product your facing. The only real way to find out which execution method works well against a vendor is by simply testing, failing, adapting and testing again. 
+This is the most complicated part imo. Normally, execution method will depend on what AV/EDR product you're facing. The only real way to find out which execution method works well against a vendor is by simply testing, failing, adapting and testing again. 
 
 > This means that my packer will obviously fail against some AVs.
 
-For this packer I choose to go with a technique called *Early Bird APC Injection*. To understand this technique, we first need to know what *APCs* are.
+For this packer I chose to go with a technique called *Early Bird APC Injection*. To understand this technique, we first need to know what *APCs* are.
 
 #### APCs ? Never heard of'em
 
 APC stands for *Asynchronous Procedure Call*. It's a Windows specific mechanism that allows code to be executed in the context of a specific thread, outside of the thread's normal execution flow. You can think of an APC like saying to the thread "Once you've got a moment, please run *this* function". This moment is called the *alertable* state and happens when a thread is sleeping, waiting on something, or explicitly marked as alertable. 
 
-There are two types of APCs, altough only one is interesting for us:
+There are two types of APCs, although only one is interesting for us:
 
 - User-mode APCs: what we're interested in
 - Kernel-mode APCs: used internally by the OS or drivers
@@ -319,7 +319,7 @@ if(!CreateProcessA(
 		&Pi)) {
 ```
 
-So why `DEBUG_PROCESS` instead of `CREATE_SUSPENDED`? The idea behind this implementation of Early Bird goes actually like this:
+So why `DEBUG_PROCESS` instead of `CREATE_SUSPENDED`? The idea behind this implementation of Early Bird actually goes like this:
 
 1. Create a process in debugged state, which attaches the local debugger, placing a hardware breakpoint which pauses the process (yes you see where this goes right?)
 2. The shellcode is then injected using `APCInjection()` and is then being queued via `NtQueueApcThread()`
@@ -399,7 +399,7 @@ To test detection, I used CTFPacker to pack some raw Sliver shellcode and upload
 
 ![](assets/attachment/ba5b842e1b3cf82b000a31aa4e8c9c92.png)
 
-Altough I find those results pretty good for such a basic loader, keep in mind that we've only evaded the signature based detection part of AVs. 
+Although I find those results pretty good for such a basic loader, keep in mind that we've only evaded the signature based detection part of AVs. 
 
 You can find a video on the [GitHub page](https://github.com/mochabyte0x/CTFPacker/) where I demonstrate CTFPacker successfully evading Microsoft Defender and establishing a C2 channel using raw Sliver shellcode. 
 
@@ -409,7 +409,7 @@ It's worth repeating: **CTFPacker is not bulletproof**, but it has proven useful
 
 ## Conclusion
 
-That's basically it. At this point we've walked through pretty much everything the loader does. Of course I skipped over a few things such as the integration of syswhispers3 for indirect syscalls, or how API hashing is used to resolve dynamically functions. I let the reader do it's own research. At this point, you should have enough knowledge and material to figure out the rest :P!
+That's basically it. At this point we've walked through pretty much everything the loader does. Of course I skipped over a few things such as the integration of syswhispers3 for indirect syscalls, or how API hashing is used to resolve functions dynamically. I let the reader do their own research. At this point, you should have enough knowledge and material to figure out the rest :P!
 
 I encourage you to try building your own loader after reading this blog post, and maybe the source code of CTFPacker will inspire you to create your own (better) packer.
 
