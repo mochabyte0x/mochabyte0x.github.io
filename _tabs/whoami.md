@@ -9,7 +9,7 @@ I'm Arthur aka Mocha, I'm an offensive security consultant from France (currentl
 
 ### Certifications
 
-OSCP, CRTO, C-ADPenX, CRTE, CRTPro, eCPPT, eJPT
+OSEP, CRTO, OSCP, C-ADPenX, CRTE, CRTPro, eCPPT, eJPT
 
 #### HTB ProLabs:
 
