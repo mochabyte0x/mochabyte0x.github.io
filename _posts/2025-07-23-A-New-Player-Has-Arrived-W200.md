@@ -62,6 +62,15 @@ The prices are in SGD (Singapore Dollar), so if you convert them to USD, that's 
 
 An important thing to mention: **YOU HAVE LIFETIME ACCESS TO THE COURSE MATERIALS**. That includes all future updates (which are frequent!).
 
+## Free Preview ? Gimme that!
+
+If you’re still unsure whether the course content is right for you, a free preview is also available on ASYNC Security's GitHub !
+
+- Preview: [https://github.com/ASYNC-Security/W200-Preview-Public](https://github.com/ASYNC-Security/W200-Preview-Public)
+
+You can check it out and form your own opinion based on the snippet. I can assure you that the rest of the course content maintains that same level of depth and quality.
+
+
 ## Community listener
 
 I also quickly wanted to mention something that is important to me: listening to feedback from the community. I truly believe that any company offering courses should actively listen to what their learners are saying, and make changes when necessary. 
