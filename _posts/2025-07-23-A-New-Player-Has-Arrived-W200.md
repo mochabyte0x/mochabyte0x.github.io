@@ -141,9 +141,9 @@ When I say "CAPE", I refer to the *Active Directory Penetration Tester* learning
 
 CAPE is hard. Like, really hard. It’s one of the most challenging Active Directory certifications on the market today. The skill assessments are tough and the attacks you're required to perform are really advanced. It’s clearly designed for people who have already a solid background in AD (exploitation). If you want a review about the *exam*, I recommend reading the following blog posts:
 
-- https://gatari.dev/posts/cape-experience/
-- https://lorenzomeacci.com/htb-cape-review
-- https://medium.com/@0xs4m/htb-cape-review-9e333dc4740e
+- [https://gatari.dev/posts/cape-experience/](https://gatari.dev/posts/cape-experience/)
+- [https://lorenzomeacci.com/htb-cape-review](https://lorenzomeacci.com/htb-cape-review)
+- [https://medium.com/@0xs4m/htb-cape-review-9e333dc4740e](https://medium.com/@0xs4m/htb-cape-review-9e333dc4740e)
 
 Comparing W200 directly to CAPE doesn’t make a lot of sense, because the focus is completely different. 
 
